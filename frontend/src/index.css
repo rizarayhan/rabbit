@@ -10,3 +10,16 @@
 @theme {
   --color-rabbit-red: #ea2e0e;
 }
+
+@utility no-scrollbar {
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Internet Explorer and Edge */
+  -ms-overflow-style: none;
+
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
