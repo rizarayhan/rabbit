@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section>
+    <section className="relative">
       <img
         src={heroImg}
         alt="Rabit"
