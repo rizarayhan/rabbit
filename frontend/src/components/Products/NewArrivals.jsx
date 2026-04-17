@@ -134,13 +134,6 @@ const NewArrivals = () => {
       setCanScrollLeft(leftScroll > 0);
       setCanScrollRight(rightScrollable);
     }
-
-    console.log({
-      scrollLeft: container.scrollLeft,
-      clientWidth: container.clientWidth,
-      containerScrollWidth: container.scrollWidth,
-      offsetLeft: scrollRef.current.offsetLeft,
-    });
   };
 
   useEffect(() => {
@@ -151,7 +144,7 @@ const NewArrivals = () => {
 
       return () => container.removeEventListener("scroll", updateScrollButtons);
     }
-  });
+  }, []);
 
   return (
     <section className="py-16 px-4 lg:px-0">
