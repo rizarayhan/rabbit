@@ -30,7 +30,7 @@ const Checkout = () => {
     lastName: "",
     address: "",
     city: "",
-    postalcode: "",
+    postalCode: "",
     country: "",
     phone: "",
   });
@@ -128,11 +128,11 @@ const Checkout = () => {
               <label className="block text-gray-700 ">Postal Code</label>
               <input
                 type="text"
-                value={shippingAddress.postalcode}
+                value={shippingAddress.postalCode}
                 onChange={(e) =>
                   setShippingAddress({
                     ...shippingAddress,
-                    postalcode: e.target.value,
+                    postalCode: e.target.value,
                   })
                 }
                 className="w-full p-2 border border-gray-200 rounded"
