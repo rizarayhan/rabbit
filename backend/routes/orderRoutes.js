@@ -6,7 +6,7 @@ const router = express.Router();
 
 // @route GET /api/orders/my-orders
 // @desc Get logged-in user's orders
-// @access Provate
+// @access Private
 router.get("/my-orders", protect, async (req, res) => {
   try {
     // Find orders for the authenticated user
