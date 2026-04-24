@@ -95,18 +95,6 @@ const adminSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       })
-      .addCase(addUser.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(addUser.fulfilled, (state, action) => {
-        state.loading = false;
-        state.users.push(action.payload.user);
-      })
-      .addCase(addUser.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload.message;
-      })
       .addCase(updateUser.fulfilled, (state, action) => {
         const updatedUser = action.payload;
         const userIndex = state.users.findIndex(
