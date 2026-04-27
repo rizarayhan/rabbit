@@ -1,4 +1,4 @@
-import React, { cloneElement, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaFilter } from "react-icons/fa";
 import FilterSidebar from "../components/Products/FilterSidebar";
 import SortOptions from "../components/Products/SortOptions";

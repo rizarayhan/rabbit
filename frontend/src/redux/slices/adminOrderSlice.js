@@ -28,7 +28,7 @@ export const updateOrderStatus = createAsyncThunk(
     try {
       const response = await axios.put(
         `${import.meta.env.VITE_BACKEND_URL}/api/admin/orders/${id}`,
-        status,
+        { status },
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("userToken")}`,

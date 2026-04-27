@@ -21,8 +21,11 @@ const OrderManagement = () => {
   }, [dispatch, user, navigate]);
 
   const handleStatusChange = (userId, status) => {
-    dispatch(updateOrderStatus({ id: fetchOrderDetails, status }));
+    dispatch(updateOrderStatus({ id: userId, status }));
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="max-w-7xl mx-auto p-6">
@@ -49,7 +52,7 @@ const OrderManagement = () => {
                     #{order._id}
                   </td>
                   <td className="p-4">{order.user.name}</td>
-                  <td className="p-4">${order.totalPrice}</td>
+                  <td className="p-4">${order.totalPrice.toFixed(2)}</td>
                   <td className="p-4">
                     <select
                       value={order.status}
